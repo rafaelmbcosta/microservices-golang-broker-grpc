@@ -11,14 +11,14 @@ const webPort = "3001"
 type Config struct{}
 
 func main() {
-	// app := Config{}
+	app := Config{}
 
 	log.Println("Starting server on port 3001")
 
 	//define http server
 	srv := &http.Server{
-		Addr: fmt.Sprintf(":%s", webPort),
-		// Handler: app.routes(),
+		Addr:    fmt.Sprintf(":%s", webPort),
+		Handler: app.routes(),
 	}
 
 	err := srv.ListenAndServe()
