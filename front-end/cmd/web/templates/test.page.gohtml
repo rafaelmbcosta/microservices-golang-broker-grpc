@@ -43,7 +43,7 @@
             method: 'POST',
         }
 
-        fetch("http:\/\/localhost:8080", body)
+        fetch("http:\/\/localhost:3001", body)
         .then((response) => response.json())
         .then((data) => {
             sent.innerHTML ="empty post request";
@@ -58,6 +58,6 @@
             output.innerHTML += "<br><br>Eror: " + error;
         })
     })
-        
+
     </script>
 {{end}}
