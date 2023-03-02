@@ -7,9 +7,8 @@ import (
 func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
 	payload := jsonResponse{
 		Error:   false,
-		Message: "Broker retrieved successfully",
+		Message: "Hit the broker",
 	}
 
 	_ = app.writeJSON(w, http.StatusOK, payload)
-
 }
